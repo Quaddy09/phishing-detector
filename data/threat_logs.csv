@@ -1,0 +1,3 @@
+timestamp,email_snippet,prediction
+2025-10-15 10:40:39,"Hey team, please find the meeting notes attached.",safe
+2025-10-15 10:40:52,Your PayPal account is locked. Please verify your details immediately at http://,phishing
