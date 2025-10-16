@@ -1,92 +1,55 @@
-# 🛡️ Phishing Email Detector
+# 🛡️ Phishing URL Detector (Machine Learning Project)
 
-A machine learning–powered web app that detects phishing emails and suspicious URLs in real time.
-
----
-
-## 🚀 Features
-- Detects phishing vs. safe emails using a trained ML model  
-- Scans and flags suspicious URLs inside the email  
-- Logs all detections with timestamps  
-- Displays a visual dashboard of phishing activity  
+## 🔍 Overview
+This project is a **Phishing URL Detection System** built using **Python**, **Machine Learning**, and **NLP techniques**.  
+It automatically classifies URLs as **Legitimate** or **Phishing**, helping identify potential cyber threats early.  
+The goal is to showcase cybersecurity, data preprocessing, and model training skills.
 
 ---
 
-## 🧠 Tech Stack
-- **Python 3.13**
-- **Streamlit** for the web interface  
-- **scikit-learn** for ML model  
-- **NLTK** for text preprocessing  
-- **tldextract** for URL analysis  
+## ⚙️ Features
+- ✅ Detects phishing URLs using a trained ML model  
+- 🧠 Uses Natural Language Processing for URL feature extraction  
+- 📊 Achieves high accuracy with Logistic Regression  
+- 💾 Saves model as `.pkl` for future inference  
+- 🔄 Easy to retrain with new datasets  
 
 ---
 
-## 🧩 Project Structure
+## 🧰 Tech Stack
+| Category | Tools / Libraries |
+|-----------|------------------|
+| Language | Python |
+| Machine Learning | Scikit-learn |
+| NLP | NLTK |
+| Data Handling | Pandas, NumPy |
+| Model Storage | Joblib |
+| Environment | VS Code, PowerShell |
+| Version Control | Git + GitHub |
+
+---
+
+## 📂 Project Structure
 phishing-detector/
 │
-├── app.py # Streamlit main app
-├── requirements.txt # Python dependencies
-├── README.md # Project documentation
-│
 ├── data/
-│ ├── phishing_emails.csv
-│ └── threat_logs.csv
+│ └── phishing_site_urls.csv # Dataset
 │
 ├── model/
-│ └── phishing_model.pkl
+│ └── phishing_model.pkl # Trained model
 │
-└── src/
-├── preprocess.py
-├── train_model.py
-├── logger.py
-└── url_analysis.py
-
+├── src/
+│ ├── train_model.py # Training script
+│ └── predict.py # Prediction script
+│
+├── requirements.txt # Python dependencies
+└── README.md # Documentation
 
 ---
 
-## 🧰 Installation & Usage
+## 🚀 How to Run Locally
 
+### 1️⃣ Clone this repository
 ```bash
-# Clone the repo
-git clone https://github.com/<your-username>/phishing-detector.git
+git clone https://github.com/Quaddy09/phishing-detector.git
 cd phishing-detector
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Train model
-python src/train_model.py
-
-# Run Streamlit app
-streamlit run app.py
-
-🧩 Example
-
-Paste an email message:
-
-Your account is locked. Verify now: http://paypal-security-login.xyz
-
-
-App Output:
-
-🚨 This email is potentially malicious!
-⚠️ Suspicious URL detected: paypal-security-login.xyz
-
-💡 Future Enhancements
-
-Integrate with PhishTank / VirusTotal APIs
-
-Add email header spoofing detection
-
-Deploy on Streamlit Cloud
-
----
-
-### 🪜 Step 4 — Initialize Git
-
-Open PowerShell in your project root:
-
-```bash
-git init
-git add .
-git commit -m "Initial commit: Phishing Email Detector"
